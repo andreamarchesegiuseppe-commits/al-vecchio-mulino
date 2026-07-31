@@ -68,7 +68,7 @@ const whatsappLinks = document.querySelectorAll('a[href^="https://wa.me/"]');
 const translations = {
   en: {
     'Il ristorante': 'The restaurant', 'Estate e inverno': 'Summer & winter', 'Contatti': 'Contact',
-    'Prenota': 'Book', 'Ristorante · Beaulard': 'Restaurant · Beaulard', 'La montagna': 'The mountains',
+    'Prenota': 'Book', 'Chiama ora': 'Call now', 'Ristorante · Beaulard': 'Restaurant · Beaulard', 'La montagna': 'The mountains',
     'si mette a tavola.': 'come to the table.', "Cucina tipica piemontese, natura e accoglienza nel cuore dell'Alta Val di Susa.": 'Traditional Piedmontese cuisine, nature and hospitality in the heart of the Upper Susa Valley.',
     'Chiama per prenotare': 'Call to book', 'Scopri il menu': 'Discover the menu', 'Il Vecchio Mulino': 'The Old Mill',
     'Tradizione piemontese in un luogo autentico.': 'Piedmontese tradition in an authentic setting.',
@@ -101,7 +101,7 @@ const translations = {
     'Apri su Google Maps': 'Open in Google Maps', 'Seguici su Instagram': 'Follow us on Instagram', 'Chiama': 'Call', 'Apri PDF': 'Open PDF', 'Scarica': 'Download'
   },
   fr: {
-    'Il ristorante': 'Le restaurant', 'Estate e inverno': 'Été et hiver', 'Contatti': 'Contact', 'Prenota': 'Réserver',
+    'Il ristorante': 'Le restaurant', 'Estate e inverno': 'Été et hiver', 'Contatti': 'Contact', 'Prenota': 'Réserver', 'Chiama ora': 'Appeler maintenant',
     'Ristorante · Beaulard': 'Restaurant · Beaulard', 'La montagna': 'La montagne', 'si mette a tavola.': "s'invite à table.",
     "Cucina tipica piemontese, natura e accoglienza nel cuore dell'Alta Val di Susa.": "Cuisine piémontaise, nature et accueil au cœur de la Haute Vallée de Suse.",
     'Chiama per prenotare': 'Appelez pour réserver', 'Scopri il menu': 'Découvrir le menu', 'Il Vecchio Mulino': 'Le Vieux Moulin',
@@ -135,7 +135,7 @@ const translations = {
     'Apri su Google Maps': 'Ouvrir dans Google Maps', 'Seguici su Instagram': 'Suivez-nous sur Instagram', 'Chiama': 'Appeler', 'Apri PDF': 'Ouvrir le PDF', 'Scarica': 'Télécharger'
   },
   de: {
-    'Il ristorante': 'Das Restaurant', 'Estate e inverno': 'Sommer & Winter', 'Contatti': 'Kontakt', 'Prenota': 'Reservieren',
+    'Il ristorante': 'Das Restaurant', 'Estate e inverno': 'Sommer & Winter', 'Contatti': 'Kontakt', 'Prenota': 'Reservieren', 'Chiama ora': 'Jetzt anrufen',
     'Ristorante · Beaulard': 'Restaurant · Beaulard', 'La montagna': 'Die Berge', 'si mette a tavola.': 'kommen auf den Tisch.',
     "Cucina tipica piemontese, natura e accoglienza nel cuore dell'Alta Val di Susa.": 'Traditionelle piemontesische Küche, Natur und Gastfreundschaft im Herzen des oberen Susatals.',
     'Chiama per prenotare': 'Zur Reservierung anrufen', 'Scopri il menu': 'Speisekarte entdecken', 'Il Vecchio Mulino': 'Die alte Mühle',

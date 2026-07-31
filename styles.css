@@ -69,6 +69,7 @@ button { font: inherit; }
 }
 .main-nav a:hover::after { right: 0; }
 .header-cta {
+  display: block;
   border: 1px solid rgba(255,255,255,.7);
   border-radius: 100px;
   padding: 11px 22px;
@@ -77,9 +78,40 @@ button { font: inherit; }
   font-weight: 700;
   letter-spacing: .12em;
   transition: background .2s, color .2s;
+  cursor: pointer;
+  list-style: none;
 }
+.header-cta::-webkit-details-marker { display: none; }
 .header-cta:hover { background: var(--white); color: var(--black); }
 .header-actions { display: flex; align-items: center; gap: 12px; }
+.header-booking { position: relative; }
+.booking-menu {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 190px;
+  padding: 8px;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 16px;
+  background: rgba(17,16,15,.98);
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+}
+.booking-menu::before {
+  content: "";
+  position: absolute;
+  inset: -12px 0 auto;
+  height: 12px;
+}
+.booking-menu a {
+  display: block;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: .78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+.booking-menu a:hover { background: rgba(255,255,255,.1); }
 .language-picker {
   display: inline-flex;
   align-items: center;
@@ -419,7 +451,7 @@ footer img {
 @media (max-width: 900px) {
   .site-header { grid-template-columns: auto 1fr auto; }
   .brand img { width: 66px; height: 58px; }
-  .header-cta { display: none; }
+  .header-booking { display: none; }
   .header-actions { justify-self: center; }
   .menu-toggle {
     display: grid;
@@ -432,6 +464,8 @@ footer img {
     border-radius: 50%;
     background: rgba(0,0,0,.4);
     color: white;
+    position: relative;
+    z-index: 2;
   }
   .menu-toggle span {
     display: block;
@@ -441,7 +475,7 @@ footer img {
   .main-nav {
     position: fixed;
     inset: 0;
-    z-index: -1;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -459,6 +493,7 @@ footer img {
     opacity: 1;
     pointer-events: auto;
   }
+  .brand, .header-actions { position: relative; z-index: 2; }
   .hero-content { padding: 0 24px 14vh; }
   .hero h1 { font-size: clamp(4.2rem, 18vw, 6.2rem); }
   .scroll-cue { display: none; }
