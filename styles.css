@@ -290,6 +290,39 @@ button { font: inherit; }
   object-fit: cover;
 }
 
+.story-section {
+  position: relative;
+  padding: 130px 6vw;
+  background: var(--black-soft);
+}
+.story-grid {
+  max-width: 1240px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: .9fr 1.1fr;
+  gap: 10vw;
+}
+.story-heading h2, .territory-heading h2 {
+  font-size: clamp(3.2rem, 6vw, 6.3rem);
+  letter-spacing: -.035em;
+}
+.story-copy { padding-top: 70px; }
+.story-copy > p {
+  margin: 0 0 24px;
+  color: rgba(255,255,255,.76);
+  font-size: 1.06rem;
+}
+.story-copy .story-signature {
+  margin-top: 40px;
+  padding: 26px 0 0 28px;
+  border-top: 1px solid rgba(255,255,255,.15);
+  border-left: 3px solid var(--burgundy);
+  color: var(--white);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.65rem;
+  line-height: 1.35;
+}
+
 .menu-section, .gallery-section {
   position: relative;
   padding: 130px 6vw;
@@ -387,6 +420,148 @@ button { font: inherit; }
 .gallery-grid figure:hover img { transform: scale(1.035); }
 .gallery-large { grid-row: span 2; }
 .gallery-wide { grid-column: 1 / -1; height: 56vh; }
+
+.reviews-section {
+  position: relative;
+  padding: 130px 6vw;
+  background: var(--cream);
+  color: var(--black);
+}
+.reviews-intro {
+  max-width: 1320px;
+  margin: 0 auto 72px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: end;
+  gap: 60px;
+}
+.reviews-intro h2 {
+  font-size: clamp(3.2rem, 6vw, 6.3rem);
+  letter-spacing: -.035em;
+}
+.google-rating {
+  min-width: 250px;
+  padding: 26px 30px;
+  border-left: 1px solid #d8cec2;
+}
+.google-label { color: #625d57; font-weight: 700; }
+.google-label span { color: #4285f4; font-size: 1.2rem; font-weight: 800; }
+.google-rating > strong {
+  display: inline-block;
+  margin: 10px 14px 0 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 4rem;
+  line-height: 1;
+}
+.rating-stars { display: inline-block; color: #f4b400; letter-spacing: .08em; }
+.google-rating p { margin: 7px 0 0; color: #716b65; font-size: .86rem; }
+.review-summary-grid {
+  max-width: 1320px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid #d8cec2;
+  border-bottom: 1px solid #d8cec2;
+}
+.review-summary { padding: 42px 34px 46px; }
+.review-summary + .review-summary { border-left: 1px solid #d8cec2; }
+.review-summary > span { color: var(--burgundy); font-size: .72rem; font-weight: 800; letter-spacing: .16em; }
+.review-summary h3 {
+  margin: 34px 0 14px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1;
+}
+.review-summary p { margin: 0; color: #625d57; }
+.reviews-actions {
+  max-width: 1320px;
+  margin: 36px auto 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.reviews-outline { border: 1px solid #b9aca0; color: var(--black); }
+.reviews-outline:hover { border-color: var(--black); }
+.reviews-update { max-width: 1320px; margin: 20px auto 0; color: #817a73; font-size: .76rem; }
+
+.territory-section {
+  position: relative;
+  padding: 130px 6vw;
+  background: var(--cream);
+  color: var(--black);
+}
+.territory-section .section-number { color: rgba(0,0,0,.12); }
+.territory-heading {
+  max-width: 1320px;
+  margin: 0 auto 72px;
+  display: grid;
+  grid-template-columns: 1.1fr .9fr;
+  align-items: end;
+  gap: 9vw;
+}
+.territory-heading > p {
+  margin: 0 0 12px;
+  font-size: 1.08rem;
+}
+.territory-heading .eyebrow { color: var(--burgundy); }
+.route-grid {
+  max-width: 1320px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+.route-card {
+  display: flex;
+  flex-direction: column;
+  min-height: 430px;
+  padding: 36px;
+  border: 1px solid var(--cream-dark);
+  background: var(--white);
+  transition: transform .25s, box-shadow .25s;
+}
+.route-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 55px rgba(55,35,20,.11);
+}
+.route-topline {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  color: var(--burgundy);
+  font-size: .72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .16em;
+}
+.route-topline strong { color: #736d67; }
+.route-card h3 {
+  margin: 42px 0 14px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.2rem, 3vw, 3.3rem);
+  font-weight: 600;
+  line-height: 1;
+}
+.route-card > p { margin: 0; color: #625d57; }
+.route-card dl {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  margin: auto 0 28px;
+  padding-top: 34px;
+}
+.route-card dl div { border-left: 1px solid var(--cream-dark); padding-left: 14px; }
+.route-card dt { color: #817a73; font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; }
+.route-card dd { margin: 4px 0 0; font-weight: 700; }
+.route-card > a { color: var(--burgundy); font-weight: 800; }
+.route-card > a span { margin-left: 8px; }
+.route-disclaimer {
+  max-width: 1320px;
+  margin: 34px auto 0;
+  color: #716b65;
+  font-size: .82rem;
+}
 
 .contact-section {
   position: relative;
@@ -493,10 +668,12 @@ footer img {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 24px;
+    gap: 16px;
+    padding: 110px 24px 90px;
+    overflow-y: auto;
     background: transparent;
     font-family: "Cormorant Garamond", serif;
-    font-size: 2.2rem;
+    font-size: clamp(1.55rem, 7vw, 2.05rem);
     text-transform: none;
     letter-spacing: normal;
     opacity: 0;
@@ -511,12 +688,13 @@ footer img {
   .hero-content { padding: 0 24px 14vh; }
   .hero h1 { font-size: clamp(4.2rem, 18vw, 6.2rem); }
   .scroll-cue { display: none; }
-  .intro, .menu-section, .season-section, .gallery-section { padding: 100px 24px; }
-  .intro-grid, .season-card, .season-card.reverse {
+  .intro, .story-section, .menu-section, .season-section, .territory-section, .gallery-section, .reviews-section { padding: 100px 24px; }
+  .intro-grid, .story-grid, .territory-heading, .reviews-intro, .season-card, .season-card.reverse {
     grid-template-columns: 1fr;
     gap: 38px;
   }
   .intro-copy { padding-top: 0; }
+  .story-copy { padding-top: 0; }
   .season-card.reverse figure { order: 0; }
   .wide-image, .season-card figure {
     height: 52vh;
@@ -525,6 +703,10 @@ footer img {
   .menu-grid { grid-template-columns: 1fr; }
   .menu-card { min-height: auto; }
   .gallery-grid { grid-template-columns: 1fr; }
+  .route-grid { grid-template-columns: 1fr; }
+  .review-summary-grid { grid-template-columns: 1fr; }
+  .review-summary + .review-summary { border-left: 0; border-top: 1px solid #d8cec2; }
+  .google-rating { border-left: 0; border-top: 1px solid #d8cec2; padding-left: 0; }
   .gallery-large, .gallery-wide { grid-column: auto; grid-row: auto; height: auto; }
   .gallery-grid figure { min-height: 340px; }
   footer {
@@ -566,6 +748,9 @@ footer img {
   .intro h2, .section-heading h2, .season-card h2, .contact-content h2 {
     font-size: clamp(2.8rem, 14vw, 4.4rem);
   }
+  .story-heading h2, .territory-heading h2 { font-size: clamp(2.8rem, 14vw, 4.4rem); }
+  .reviews-intro h2 { font-size: clamp(2.8rem, 14vw, 4.4rem); }
+  .route-card { min-height: 410px; padding: 28px 22px; }
 }
 
 
