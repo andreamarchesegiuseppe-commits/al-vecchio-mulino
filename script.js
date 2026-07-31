@@ -8,6 +8,7 @@ window.addEventListener('scroll', () => {
 
 toggle?.addEventListener('click', () => {
   const open = nav.classList.toggle('open');
+  document.body.classList.toggle('mobile-menu-open', open);
   toggle.setAttribute('aria-expanded', String(open));
   document.body.style.overflow = open ? 'hidden' : '';
 });
@@ -15,6 +16,7 @@ toggle?.addEventListener('click', () => {
 nav?.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     nav.classList.remove('open');
+    document.body.classList.remove('mobile-menu-open');
     toggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
   });
@@ -58,6 +60,13 @@ menuViewer?.addEventListener('click', event => {
   if (event.target === menuViewer) closePhotographicMenu();
 });
 document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && nav?.classList.contains('open')) {
+    nav.classList.remove('open');
+    document.body.classList.remove('mobile-menu-open');
+    toggle?.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+    toggle?.focus();
+  }
   if (event.key === 'Escape' && menuViewer?.classList.contains('open')) closePhotographicMenu();
 });
 

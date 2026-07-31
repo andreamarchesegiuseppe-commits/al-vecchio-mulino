@@ -449,6 +449,16 @@ footer img {
 }
 
 @media (max-width: 900px) {
+  body.mobile-menu-open::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    width: 100vw;
+    height: 100dvh;
+    background: #11100f;
+  }
+  body.mobile-menu-open .site-header { z-index: 110; }
   .site-header { grid-template-columns: auto 1fr auto; }
   .brand img { width: 66px; height: 58px; }
   .header-booking { display: none; }
@@ -476,11 +486,15 @@ footer img {
     position: fixed;
     inset: 0;
     z-index: 1;
+    grid-column: 1 / -1;
+    width: 100vw;
+    max-width: none;
+    height: 100dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 24px;
-    background: rgba(17,16,15,.98);
+    background: transparent;
     font-family: "Cormorant Garamond", serif;
     font-size: 2.2rem;
     text-transform: none;
