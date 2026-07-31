@@ -79,6 +79,28 @@ button { font: inherit; }
   transition: background .2s, color .2s;
 }
 .header-cta:hover { background: var(--white); color: var(--black); }
+.header-actions { display: flex; align-items: center; gap: 12px; }
+.language-picker {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  min-height: 42px;
+  padding: 0 10px;
+  border: 1px solid rgba(255,255,255,.45);
+  border-radius: 100px;
+  background: rgba(0,0,0,.24);
+}
+.language-picker select {
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--white);
+  font: inherit;
+  font-size: .76rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+.language-picker option { color: var(--black); }
 .menu-toggle { display: none; }
 
 .hero {
@@ -152,6 +174,8 @@ button { font: inherit; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { background: var(--burgundy); color: var(--white); }
 .button-primary:hover { background: var(--burgundy-dark); }
+.button-whatsapp { background: #25d366; color: #071f10; }
+.button-whatsapp:hover { background: #20bd5a; }
 .button-ghost { border: 1px solid rgba(255,255,255,.78); }
 .button-ghost:hover { background: var(--white); color: var(--black); }
 .button-outline { border: 1px solid rgba(255,255,255,.25); }
@@ -380,7 +404,7 @@ footer img {
   height: 52px;
   object-fit: contain;
 }
-.mobile-call { display: none; }
+.mobile-booking { display: none; }
 
 .reveal {
   opacity: 0;
@@ -396,6 +420,7 @@ footer img {
   .site-header { grid-template-columns: auto 1fr auto; }
   .brand img { width: 66px; height: 58px; }
   .header-cta { display: none; }
+  .header-actions { justify-self: center; }
   .menu-toggle {
     display: grid;
     justify-self: end;
@@ -458,18 +483,22 @@ footer img {
     align-items: flex-start;
     padding-bottom: 100px;
   }
-  .mobile-call {
+  .mobile-booking {
     position: fixed;
     z-index: 60;
     left: 14px;
     right: 14px;
     bottom: 14px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+  .mobile-call, .mobile-whatsapp {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 54px;
     border-radius: 100px;
-    background: var(--burgundy);
     color: white;
     font-size: .8rem;
     font-weight: 700;
@@ -477,6 +506,8 @@ footer img {
     letter-spacing: .12em;
     box-shadow: 0 12px 32px rgba(0,0,0,.3);
   }
+  .mobile-call { background: var(--burgundy); }
+  .mobile-whatsapp { background: #25d366; color: #071f10; }
 }
 
 @media (max-width: 560px) {
@@ -486,78 +517,6 @@ footer img {
   .intro h2, .section-heading h2, .season-card h2, .contact-content h2 {
     font-size: clamp(2.8rem, 14vw, 4.4rem);
   }
-}
-
-
-.real-menu-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 22px;
-}
-.real-menu-card {
-  border: 1px solid rgba(255,255,255,.13);
-  padding: 34px;
-  background: linear-gradient(145deg, rgba(255,255,255,.025), rgba(255,255,255,.008));
-}
-.menu-card-header {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin-bottom: 18px;
-  padding-bottom: 18px;
-  border-bottom: 1px solid rgba(255,255,255,.12);
-}
-.menu-card-header span {
-  color: var(--burgundy);
-  font-size: .78rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: .22em;
-}
-.dish {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 17px 0;
-  border-bottom: 1px solid rgba(255,255,255,.08);
-}
-.dish:last-child { border-bottom: 0; }
-.dish h3 {
-  margin: 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.55rem;
-  font-weight: 600;
-  line-height: 1.08;
-}
-.dish p {
-  margin: 7px 0 0;
-  color: var(--grey);
-  font-size: .88rem;
-}
-.dish strong {
-  flex: 0 0 auto;
-  color: var(--cream);
-  white-space: nowrap;
-  font-size: .96rem;
-}
-.menu-note {
-  margin-top: 34px;
-  padding: 24px 28px;
-  border-left: 3px solid var(--burgundy);
-  background: rgba(255,255,255,.035);
-  color: var(--grey);
-  font-size: .84rem;
-}
-.menu-note p { margin: 5px 0; }
-
-@media (max-width: 900px) {
-  .real-menu-grid { grid-template-columns: 1fr; }
-}
-@media (max-width: 560px) {
-  .real-menu-card { padding: 24px 20px; }
-  .dish { gap: 14px; }
-  .dish h3 { font-size: 1.35rem; }
-  .dish strong { font-size: .88rem; }
 }
 
 

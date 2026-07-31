@@ -57,7 +57,18 @@
       <a href="https://www.instagram.com/veilhmourin/" target="_blank" rel="noopener">Instagram</a>
     </nav>
 
-    <a class="header-cta" href="tel:+390122851669">Prenota</a>
+    <div class="header-actions">
+      <label class="language-picker" aria-label="Seleziona lingua">
+        <span aria-hidden="true">🌐</span>
+        <select id="languageSelect" aria-label="Seleziona lingua">
+          <option value="it">IT</option>
+          <option value="en">EN</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+        </select>
+      </label>
+      <a class="header-cta" href="tel:+390122851669">Prenota</a>
+    </div>
   </header>
 
   <main>
@@ -249,12 +260,13 @@
       <div class="contact-backdrop"></div>
       <div class="contact-content reveal">
         <img class="contact-logo" src="assets/logo.png" alt="Logo Vëilh Mourin">
-        <p class="eyebrow">Prenotazioni solo telefoniche</p>
+        <p class="eyebrow">Prenotazioni per telefono o WhatsApp</p>
         <h2>Ti aspettiamo<br>a Beaulard.</h2>
         <p>Via del Mulino, 12 · 10056 Beaulard (TO)</p>
         <p>Pranzo 11:00–15:00 · Cena 18:00–22:00</p>
         <div class="contact-actions">
           <a class="button button-primary" href="tel:+390122851669">+39 0122 851669</a>
+          <a class="button button-whatsapp" href="https://wa.me/390122851669?text=Buongiorno%2C%20vorrei%20prenotare%20un%20tavolo." target="_blank" rel="noopener">Scrivici su WhatsApp</a>
           <a class="button button-ghost" href="https://www.google.com/maps/search/?api=1&query=Via+del+Mulino+12+Beaulard+TO" target="_blank" rel="noopener">Apri su Google Maps</a>
           <a class="button button-ghost" href="https://www.instagram.com/veilhmourin/" target="_blank" rel="noopener">Seguici su Instagram</a>
         </div>
@@ -270,7 +282,10 @@
     <p>© 2026 · Via del Mulino, 12 · Beaulard (TO) · <a href="https://www.instagram.com/veilhmourin/" target="_blank" rel="noopener">Instagram</a></p>
   </footer>
 
-  <a class="mobile-call" href="tel:+390122851669">Chiama e prenota</a>
+  <div class="mobile-booking">
+    <a class="mobile-call" href="tel:+390122851669">Chiama</a>
+    <a class="mobile-whatsapp" href="https://wa.me/390122851669?text=Buongiorno%2C%20vorrei%20prenotare%20un%20tavolo." target="_blank" rel="noopener">WhatsApp</a>
+  </div>
 
   <div class="menu-viewer" id="menuViewer" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Menu fotografico">
     <div class="menu-viewer-toolbar">
