@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://vecchiomulinobeaulard.it/sitemap.xml
+Sitemap: https://www.vecchiomulinobeaulard.it/sitemap.xml
